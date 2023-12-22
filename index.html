@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torii Landing</title>
+<style>
+  body { 
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #262626, #0d0d0d); 
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+  }
+  .torii { 
+    font-size: 48px; 
+    letter-spacing: 5px; 
+    color: #a52a2a; 
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container {
+    text-align: left;
+    padding-left: 5%;
+    max-width: 40%; 
+  }
+  .header { 
+    font-size: 48px; 
+    color: #e0e0e0;
+    margin-bottom: 20px; 
+  }
+  .subheader { 
+    font-size: 26px; 
+    color: #bfbfbf;
+    margin-bottom: 30px; 
+  }
+  .email-input { 
+    padding: 10px;
+    font-size: 18px; 
+    width: 300px; 
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+  .submit-button { 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    background-color: #a52a2a; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+  }
+  .image-container {
+    max-width: 1400px; 
+    max-height: 100%; 
+    order: -1; 
+    padding-right: 5%; 
+  }
+  .image-container img {
+    width: 100%;
+    height: auto; 
+  }
+</style>
+</head>
+<body>
+
+<div class="torii">T O R I I</div>
+
+<div class="image-container">
+  <img src="03-removebg-preview.png" alt="Customizable Shifter">
+</div>
+
+<div class="container">
+  <div class="header">A revolutionary, customizable shifter coming soon</div>
+  <div class="subheader">Sign up to our newsletter to receive the latest updates</div>
+  <input type="email" class="email-input" placeholder="Enter your email">
+  <button class="submit-button">Submit</button>
+</div>
+
+</body>
+</html>
