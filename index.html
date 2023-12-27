@@ -68,7 +68,98 @@
     width: 100%;
     height: auto; 
   }
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333; 
+      color: #bfbfbf;
+      text-align: left;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .authors {
+      font-style: italic; 
+      display: block; /*put on new line*/
+    }
+	
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 600px) {
+    body {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .torii {
+      font-size: 24px;
+      top: 10px;
+    }
+    .container {
+      padding-left: 10%;
+      padding-right: 10%;
+      max-width: 80%;
+      text-align: center;
+    }
+    .header {
+      font-size: 24px;
+    }
+    .subheader {
+      font-size: 18px;
+    }
+    .email-input {
+      width: calc(100% - 20px); /* Adjust width to be full-width minus padding */
+    }
+    .image-container {
+      max-width: 100%;
+      padding-right: 0;
+      padding-left: 10%;
+      padding-bottom: 20px;
+    }
+    .image-container img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      text-align: center;
+    }
+    .footer-content {
+      font-size: 12px;
+    }
+  }
+
 </style>
+
+<script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for subscribing!');
+        form.reset(); // Reset the form fields
+      } else {
+        alert('Oops! There was a problem submitting your form');
+      }
+    })
+    .catch(error => alert('There was a problem submitting your form'));
+  });
+</script>
+
+
 </head>
 <body>
 
@@ -81,9 +172,22 @@
 <div class="container">
   <div class="header">A revolutionary, customizable shifter coming soon</div>
   <div class="subheader">Sign up to our newsletter to receive the latest updates</div>
-  <input type="email" class="email-input" placeholder="Enter your email">
-  <button class="submit-button">Submit</button>
+  
+<form action="https://formspree.io/f/xqkrzrqb" method="POST">
+  <input type="email" class="email-input" name="email" placeholder="Enter your email" required>
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
 </div>
+
+  <footer>
+  <center>
+    <div class="footer-content">
+      © 2023 Torii. All rights reserved.
+      <span class="authors">Created by: Perry Newlin, Mohammad Ahmed</span>
+    </div>
+	</center>
+  </footer>
 
 </body>
 </html>
