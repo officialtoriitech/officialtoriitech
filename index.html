@@ -1,193 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Torii Landin</title>
-<style>
-  body { 
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #262626, #0d0d0d); 
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center; 
-    position: relative;
-  }
-  .torii { 
-    font-size: 48px; 
-    letter-spacing: 5px; 
-    color: #a52a2a; 
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .container {
-    text-align: left;
-    padding-left: 5%;
-    max-width: 40%; 
-  }
-  .header { 
-    font-size: 48px; 
-    color: #e0e0e0;
-    margin-bottom: 20px; 
-  }
-  .subheader { 
-    font-size: 26px; 
-    color: #bfbfbf;
-    margin-bottom: 30px; 
-  }
-  .email-input { 
-    padding: 10px;
-    font-size: 18px; 
-    width: 300px; 
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-  }
-  .submit-button { 
-    padding: 10px 20px; 
-    font-size: 18px; 
-    background-color: #a52a2a; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
-  }
-  .image-container {
-    max-width: 1400px; 
-    max-height: 100%; 
-    order: -1; 
-    padding-right: 5%; 
-  }
-  .image-container img {
-    width: 100%;
-    height: auto; 
-  }
-    footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333; 
-      color: #bfbfbf;
-      text-align: left;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    .footer-content {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-    }
-
-    .authors {
-      font-style: italic; 
-      display: block; /*put on new line*/
-    }
-	
-
-  /* Mobile Styles */
-  @media only screen and (max-width: 600px) {
-    body {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .torii {
-      font-size: 24px;
-      top: 10px;
-    }
-    .container {
-      padding-left: 10%;
-      padding-right: 10%;
-      max-width: 80%;
-      text-align: center;
-    }
-    .header {
-      font-size: 24px;
-    }
-    .subheader {
-      font-size: 18px;
-    }
-    .email-input {
-      width: calc(100% - 20px); /* Adjust width to be full-width minus padding */
-    }
-    .image-container {
-      max-width: 100%;
-      padding-right: 0;
-      padding-left: 10%;
-      padding-bottom: 20px;
-    }
-    .image-container img {
-      width: auto;
-      max-width: 100%;
-      height: auto;
-    }
-    footer {
-      text-align: center;
-    }
-    .footer-content {
-      font-size: 12px;
-    }
-  }
-
-</style>
-
-<script>
-  const form = document.querySelector('form');
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('Thank you for subscribing!');
-        form.reset(); // Reset the form fields
-      } else {
-        alert('Oops! There was a problem submitting your form');
-      }
-    })
-    .catch(error => alert('There was a problem submitting your form'));
-  });
-</script>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORII</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header" id="header">
+        <nav>
+            <img src="logo2.png" class="logo">
+            <a href="#" class="btn">Kickstarter</a>
+        </nav>
 
-<div class="torii">TORII</div>
 
-<div class="image-container">
-  <img src="03-removebg-preview.png" alt="Customizable Shifter">
-</div>
+        <div class="paragraph">
+            <h2>Upgrade your car's <span class = "red">style</span> and <span class = "red">smarts</span> with our sleek digital shift knob: <br> <span class = "red">customizable</span> display, touch controls for <span class = "red">music</span> and <span class = "red">calls</span>, and a dash of tech luxury.</h2>
+            <i class=patent>(patent pending)</i>
+        </div>
+        
 
-<div class="container">
-  <div class="header">A revolutionary, customizable shifter coming soon</div>
-  <div class="subheader">Sign up to our newsletter to receive the latest updates</div>
-  
-<form action="https://formspree.io/f/xqkrzrqb" method="POST">
-  <input type="email" class="email-input" name="email" placeholder="Enter your email" required>
-  <button type="submit" class="submit-button">Submit</button>
-</form>
-
-</div>
-
-  <footer>
-  <center>
-    <div class="footer-content">
-      © 2023 Torii. All rights reserved.
-      <span class="authors">Created by: Perry Newlin, Mohammad Ahmed</span>
+        <div class="info">
+            <div>
+                <h2>6061 Al</h2>
+                <p>Enclosure</p>
+            </div>
+            <div>
+                <h2>1.4 inch </h2>
+                <p>AMOLED Screen</p>
+            </div>
+            <div>
+                <h2>1 week</h2>
+                <p>Battery Life</p>
+            </div>
+            <div class="line">
+            </div>
+            <div>
+                <h2 id="model">TORII MK-1</h2>
+                
+            </div>
+        </div>
     </div>
-	</center>
-  </footer>
+    <script>
+
+
+        var header = document.getElementById("header");
+        var ms = document.getElementById("MAVRIK 8");
+        var m3 = document.getElementById("model3");
+        var mx = document.getElementById("modelx");
+        var my = document.getElementById("modely");
+        var model = document.getElementById("model");
+
+
+        ms.onclick = function(){
+            header.style.backgroundImage = "url(img1.png)"
+            model.innerHTML = "MAVRIK 8";
+        }
+        m3.onclick = function(){
+            header.style.backgroundImage = "url(img2.png)"
+            model.innerHTML = "Model 3";
+        }
+        mx.onclick = function(){
+            header.style.backgroundImage = "url(img3.png)"
+            model.innerHTML = "Model X";
+        }
+        my.onclick = function(){
+            header.style.backgroundImage = "url(img4.png)"
+            model.innerHTML = "Model Y";
+        }
+    </script>
+
 
 </body>
 </html>
